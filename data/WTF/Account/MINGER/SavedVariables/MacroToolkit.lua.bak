@@ -1,0 +1,10 @@
+
+MacroToolkitDB = {
+	["profileKeys"] = {
+		["Drathal - Madmortem"] = "profile",
+	},
+	["profiles"] = {
+		["profile"] = {
+		},
+	},
+}

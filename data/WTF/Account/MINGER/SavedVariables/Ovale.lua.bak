@@ -1,0 +1,27 @@
+
+OvaleDB = {
+	["namespaces"] = {
+		["LibDualSpec-1.0"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Drathal - Madmortem"] = "Drathal - Madmortem",
+	},
+	["profiles"] = {
+		["Drathal - Madmortem"] = {
+			["check"] = {
+				["opt_druid_balance_aoe"] = true,
+			},
+			["apparence"] = {
+				["minimap"] = {
+					["hide"] = true,
+				},
+				["spellFlash"] = {
+					["hideInVehicle"] = true,
+					["size"] = 2.7,
+				},
+				["enableIcons"] = false,
+			},
+		},
+	},
+}

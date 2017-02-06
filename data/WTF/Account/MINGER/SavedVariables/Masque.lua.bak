@@ -1,0 +1,25 @@
+
+MasqueDB = {
+	["namespaces"] = {
+		["LibDualSpec-1.0"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Draltair - Blackhand"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["Groups"] = {
+				["TellMeWhen_|cff00c300Global|r Group: 1"] = {
+					["SkinID"] = "ElvUIesque",
+				},
+				["TellMeWhen_Group: 1"] = {
+					["SkinID"] = "ElvUIesque",
+				},
+				["TellMeWhen"] = {
+					["SkinID"] = "ElvUIesque",
+				},
+			},
+		},
+	},
+}

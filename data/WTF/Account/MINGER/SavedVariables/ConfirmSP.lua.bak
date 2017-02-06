@@ -1,0 +1,11 @@
+
+ConfirmSP = {
+	["profileKeys"] = {
+		["Drathair - Blackhand"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["version"] = "01-26 2016-07-25",
+		},
+	},
+}

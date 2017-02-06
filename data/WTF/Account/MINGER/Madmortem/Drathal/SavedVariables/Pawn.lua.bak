@@ -1,0 +1,13 @@
+
+PawnOptions = {
+	["LastVersion"] = 2.0013,
+	["LastPlayerFullName"] = "Drathal-Madmortem",
+	["AutoSelectScales"] = true,
+	["UpgradeTracking"] = false,
+	["LastKeybindingsSet"] = 1,
+}
+PawnMrRobotScaleProviderOptions = nil
+PawnWowheadScaleProviderOptions = {
+	["LastClass"] = "DRUID",
+	["LastAdded"] = 5,
+}

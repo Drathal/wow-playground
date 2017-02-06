@@ -1,0 +1,10 @@
+
+iFriendsDB = {
+	["profileKeys"] = {
+		["Drathair - Blackhand"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

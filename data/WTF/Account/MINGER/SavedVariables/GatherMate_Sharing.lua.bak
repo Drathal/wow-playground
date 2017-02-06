@@ -1,0 +1,10 @@
+
+GatherMate_SharingDB = {
+	["profileKeys"] = {
+		["Drathair - Blackhand"] = "Drathair - Blackhand",
+	},
+	["profiles"] = {
+		["Drathair - Blackhand"] = {
+		},
+	},
+}

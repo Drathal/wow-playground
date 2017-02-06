@@ -1,0 +1,30 @@
+
+KuiNameplatesGDB = {
+	["namespaces"] = {
+		["NemesisHelper"] = {
+		},
+		["Castbar"] = {
+		},
+		["NameOnly"] = {
+		},
+		["ClassColours"] = {
+		},
+		["LowHealthColours"] = {
+		},
+		["CastWarnings"] = {
+		},
+		["Auras"] = {
+		},
+		["ComboPoints"] = {
+		},
+		["TankMode"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Darlaxle - Blackhand"] = "Darlaxle - Blackhand",
+	},
+	["profiles"] = {
+		["Darlaxle - Blackhand"] = {
+		},
+	},
+}

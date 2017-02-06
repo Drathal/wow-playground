@@ -1,0 +1,16 @@
+
+DBT_AllPersistentOptions = {
+	["Default"] = {
+		["DBM"] = {
+		},
+	},
+	["BenikUI"] = {
+		["DBM"] = {
+			["FontSize"] = 12,
+			["HugeScale"] = 1,
+			["Scale"] = 1,
+			["Font"] = "Interface\\AddOns\\ElvUI_BenikUI\\media\\fonts\\PROTOTYPE.TTF",
+			["Texture"] = "Interface\\AddOns\\ElvUI_BenikUI\\media\\textures\\Flat.tga",
+		},
+	},
+}

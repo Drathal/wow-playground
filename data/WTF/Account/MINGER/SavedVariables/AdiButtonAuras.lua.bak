@@ -1,0 +1,14 @@
+
+AdiButtonAurasDB = {
+	["namespaces"] = {
+		["LibDualSpec-1.0"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Drathal - Madmortem"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

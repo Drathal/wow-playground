@@ -1,0 +1,10 @@
+
+IndicatorsDB = {
+	["profileKeys"] = {
+		["Drathol - Blackhand"] = "Drathol - Blackhand",
+	},
+	["profiles"] = {
+		["Drathol - Blackhand"] = {
+		},
+	},
+}

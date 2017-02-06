@@ -1,0 +1,80 @@
+
+cBnivCfg = {
+	["CompressEmpty"] = true,
+	["scale"] = 0.87,
+	["Consumables"] = true,
+	["Armor"] = true,
+	["ItemSets"] = true,
+	["Junk"] = true,
+	["BankBlack"] = true,
+	["SortBags"] = true,
+	["BankCustomBags"] = true,
+	["Unlocked"] = true,
+	["SellJunk"] = true,
+	["Quest"] = true,
+	["NewItems"] = true,
+	["Gem"] = true,
+	["SortBank"] = true,
+	["TradeGoods"] = true,
+	["CoolStuff"] = false,
+	["FilterBank"] = true,
+	["Restack"] = true,
+}
+cB_CustomBags = {
+	{
+		["col"] = 0,
+		["prio"] = 1,
+		["name"] = "fishing",
+		["active"] = true,
+	}, -- [1]
+	{
+		["col"] = 0,
+		["prio"] = 1,
+		["name"] = "port",
+		["active"] = true,
+	}, -- [2]
+	{
+		["col"] = 0,
+		["prio"] = 1,
+		["name"] = "follower",
+		["active"] = true,
+	}, -- [3]
+	{
+		["col"] = 0,
+		["prio"] = 1,
+		["name"] = "trinkets",
+		["active"] = true,
+	}, -- [4]
+}
+cBniv_CatInfo = {
+	[139808] = "follower",
+	[139812] = "follower",
+	[138111] = "Quest",
+	[140192] = "port",
+	[137623] = "Quest",
+	[131927] = "Quest",
+	[116825] = "fishing",
+	[139813] = "follower",
+	[139879] = "follower",
+	[122610] = "Quest",
+	[6948] = "port",
+	[33820] = "fishing",
+	[129091] = "trinkets",
+	[139419] = "follower",
+	[137378] = "trinkets",
+	[136714] = "trinkets",
+	[137369] = "trinkets",
+	[136412] = "follower",
+	[139795] = "follower",
+	[141652] = "Quest",
+	[137540] = "trinkets",
+	[141605] = "port",
+	[137207] = "follower",
+	[110560] = "port",
+	[141028] = "follower",
+	[139792] = "follower",
+	[130102] = "Bag",
+	[138837] = "trinkets",
+	[139816] = "follower",
+	[121310] = "trinkets",
+}
