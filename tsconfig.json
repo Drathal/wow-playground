@@ -12,24 +12,19 @@
         "outDir": "./dist",
         "sourceMap": true,
         "pretty": true,
-        "allowJs": true,
-        "jsx": "react",
+        "allowJs": false,
         "allowSyntheticDefaultImports": true,
         "types": ["node"],
         "noEmitOnError": false
     },
+    "compileOnSave": false,
     "typeRoots": ["./node_modules/@types/"],
-    "include": [
-        "src/**/*"
-    ],
     "filesGlob": [
-        "**/*.ts",
-        "**/*.tsx",
-        "!node_modules/**"
-    ],
-    "exclude": [
-        "dist/",
-        "node_modules/"
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "!node_modules/**",
+        "!webpack/**",
+        "!test/**"
     ],
     "atom": {
         "formatOnSave": true
