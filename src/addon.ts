@@ -16,8 +16,9 @@ export const getList = (path: string): IAddonList => {
     return fs.readFileSync(path, "UTF-8", )
         .split("\n")
         .map(line => line.replace("\r", ""))
-        .map(line => ({
-            addon: line.split(": ")[0],
-            enabled: line.split(": ")[1] === "enabled"
+        .map(line => line.split(": "))
+        .map(a => ({
+            addon: a[0],
+            enabled: a[1] === "enabled"
         }));
 };
