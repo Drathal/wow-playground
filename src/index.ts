@@ -11,10 +11,13 @@ export const getPath = (base: string, account: string, server: string, char: str
 };
 
 export const getList = (path: string): IAddon[] => {
-    const file = fs.readFileSync(path, "UTF-8");
+    const file = fs.readFileSync(path, "UTF-8", );
 
     return file
         .split("\n")
         .map(line => line.replace("\r", ""))
-        .map(line => ({ addon: line.split(": ")[0], enabled: line.split(": ")[1] === "enabled" }));
+        .map(line => ({
+            addon: line.split(": ")[0],
+            enabled: line.split(": ")[1] === "enabled"
+        }));
 };

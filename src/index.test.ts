@@ -1,23 +1,19 @@
-import test from "ava";
+import { test, TestContext } from "ava";
 import * as path from "path";
-import * as addon from "./index";
+import { getPath, getList, IAddon } from "./index";
 
-test("getPath()", t => {
-    t.true(
-        addon
-            .getPath("../data/WTF/Account/", "MINGER", "Madmortem", "Drathal")
-            .includes("data/WTF/Account/MINGER/Madmortem/Drathal/AddOns.txt")
-    );
+test("getPath()", (t: TestContext) => {
+    const addonPath: string = getPath("../data/WTF/Account/", "MINGER", "Madmortem", "Drathal");
+    t.true(addonPath.includes("data/WTF/Account/MINGER/Madmortem/Drathal/AddOns.txt"));
 });
 
-test("getList()", t => {
+test("getList()", (t: TestContext) => {
     const expected = [
         { addon: "ElvUI_BenikUI", enabled: true },
         { addon: "AdvancedInterfaceOptions", enabled: true }
     ];
 
-    t.deepEqual(
-        expected,
-        addon.getList(path.join(__dirname, "../test/fixtures/AddOns.txt"))
-    );
+    const result: IAddon[] = getList(path.join(__dirname, "../test/fixtures/AddOns.txt"));
+
+    t.deepEqual(expected, result);
 });
