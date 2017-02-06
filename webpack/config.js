@@ -3,9 +3,14 @@ const path = require('path');
 const { CheckerPlugin, TsConfigPathsPlugin } = require('awesome-typescript-loader');
 
 const config = {
-    target: 'node',
+  target: 'node',
+  node: {
+    __filename: true,
+    __dirname: true
+  },
+  devtool: "source-map",
   entry: {
-    'app': './src'
+    'app': ['./src/index.ts']
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
