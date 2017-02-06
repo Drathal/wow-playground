@@ -15,7 +15,8 @@
         "allowJs": false,
         "jsx": "react",
         "allowSyntheticDefaultImports": true,
-        "types": ["node"]
+        "types": ["node"],
+        "noEmitOnError": false
     },
     "typeRoots": ["./node_modules/@types/"],
     "include": [

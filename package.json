@@ -1,24 +1,39 @@
 {
-    "name": "wow",
-    "version": "1.0.0",
-    "description": "",
-    "main": "./dist/index.js",
-    "scripts": {
-        "build": "tsc",
-        "start": "node ./dist/index.js",
-        "test": "tsc && nyc --all ava ./dist/**/*.test.js",
-        "test:watch": "tsc && ava --watch ./dist/**/*.test.js"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "@types/node": "^7.0.5",
-        "lua2json": "^1.1.2",
-        "typescript": "^2.1.5"
-    },
-    "devDependencies": {
-        "ava": "^0.18.1",
-        "leakage": "^0.2.0",
-        "nyc": "^10.1.2"
-    }
+  "name": "wow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "tslint ./src && tsc",
+    "build:webpack": "webpack --config ./webpack/config.js",
+    "clean": "git clean -fxd dist/ coverage/ *.log",
+    "start": "node ./dist/index.js",
+    "pretest": "npm run clean",
+    "test": "tsc && nyc --all ava ./dist/**/*.test.js",
+    "test:watch": "tsc && ava --watch ./dist/**/*.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lua2json": "^1.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.5",
+    "typescript": "^2.1.5",
+    "ava": "^0.18.1",
+    "awesome-typescript-loader": "^3.0.2",
+    "leakage": "^0.2.0",
+    "nyc": "^10.1.2",
+    "raw-loader": "^0.5.1",
+    "tslint": "^4.4.2",
+    "tslint-loader": "^3.3.0",
+    "webpack": "^2.2.1"
+  },
+  "nyc": {
+    "exclude": [
+      "webpack/*",
+      "dist/app*"
+    ]
+  }
 }
