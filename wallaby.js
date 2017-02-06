@@ -1,19 +1,20 @@
 module.exports = function (wallaby) {
   return {
     files: [
-      'dist/**/*.ts',
-      '!dist/**/*.test.ts'
+      'test/**/*.txt',
+      'src/**/*.ts',
+      '!src/**/*.test.ts'
     ],
     tests: [
-      'dist/**/*.test.js'
+      'src/**/*.test.ts'
     ],
     env: {
       type: 'node'
     },
     compilers: {
-     'src/**/*.ts': wallaby.compilers.typeScript({ module: 'commonjs' }),
+     '**/*.ts': wallaby.compilers.typeScript(),
     },
     testFramework: 'ava',
-    debug: true,
+    debug: true
   };
 };
