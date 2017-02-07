@@ -1,6 +1,6 @@
 import * as fs from "async-file";
 import * as path from "path";
-import { pipe, split, replace, map } from "ramda";
+import { pipe, split, map, trim } from "ramda";
 
 export interface IAddon {
     addon: string;
@@ -10,17 +10,28 @@ export interface IAddon {
 export type IAddonList = IAddon[];
 
 export const ADDONS_FILENAME = "AddOns.txt";
+export const ACCOUNT_PATH = "../data/WTF/Account/";
 
-export const getPath = (base: string, account: string, server: string, char: string): string =>
-    path.join(__dirname, base, `${account}/${server}/${char}/${ADDONS_FILENAME}`);
+export const getFile = async (path) =>
+    await fs.readFile(path, "utf8");
 
-export const getList = async (path: string): Promise<IAddonList> =>
+export const getPath = (base: string, account: string, server: string, char: string, filename: string = ADDONS_FILENAME): string =>
+    path.join(__dirname, base, `${account}/${server}/${char}/${filename}`);
+
+export const parseList = (content: string): IAddonList =>
     pipe(
-        split("\n"),
-        map(replace("\r", "")),
-        map(split(": ")),
+        trim(),
+        split(/\r?\n/),
+        map(split(":")),
         map((line: Object) => ({
-            addon: line[0],
-            enabled: line[1] === "enabled"
+            addon: trim(line[0]),
+            enabled: trim(line[1]) === "enabled"
         }))
-    )(await fs.readFile(path, "utf8"));
+    )(content);
+
+export const getAddonList = async (account: string, server: string, username: string, accountPath: string = ACCOUNT_PATH): Promise<IAddonList> => {
+    const path = getPath(accountPath, account, server, username);
+    const file = await getFile(path);
+    const parsed = parseList(file);
+    return parsed;
+};

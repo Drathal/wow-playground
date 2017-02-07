@@ -49,6 +49,9 @@
     "powerAssert": true
   },
   "nyc": {
+    "extension": [
+      ".ts"
+    ],
     "exclude": [
       "coverage/*",
       "dist/**/*.test.js",
