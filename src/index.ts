@@ -1,3 +1,4 @@
 import { getAddonList } from "./addon";
 
-console.log(getAddonList("MINGER", "Madmortem", "Drathal"))
+getAddonList("MINGER", "Madmortem", "Drathal")
+    .then(console.log)

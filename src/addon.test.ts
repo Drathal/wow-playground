@@ -7,7 +7,6 @@ test("getPath()", (t: TestContext) => {
 });
 
 test("parseList()", (t: TestContext) => {
-
     const fileContent
         = "ElvUI_BenikUI: enabled \n"
         + "AdvancedInterfaceOptions: enabled \n";
