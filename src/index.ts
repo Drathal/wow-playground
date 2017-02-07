@@ -2,5 +2,5 @@ import { getAddonList } from "./addon";
 
 export const ACCOUNT_PATH = "../data/WTF/Account/";
 
-getAddonList("MINGER", "Madmortem", "Drathal", ACCOUNT_PATH)
+getAddonList(ACCOUNT_PATH, "MINGER", "Madmortem", "Drathal")
     .then(console.log);
