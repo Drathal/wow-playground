@@ -11,7 +11,7 @@
     "test": "tsc && nyc --all --reporter=html --reporter=text ava",
     "watch:build": "tsc --watch",
     "watch:test": "ava --watch",
-    "watch:webpack": "webpack --watch --config ./webpack/config.js",
+    "watchme:webpack": "webpack --watch --config ./webpack/config.js",
     "webpack:build": "webpack --config ./webpack/config.js",
     "webpack:start": "node ./dist/app.bundle.js"
   },
