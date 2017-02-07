@@ -28,12 +28,3 @@ test("getAddonList()", async (t: TestContext) => {
 
     t.deepEqual(expected, result[0]);
 });
-
-/*
-import { iterate } from "leakage";
-test.serial.skip("addon.getPath() leak", (t: TestContext) => {
-    iterate(1000, () => {
-        getPath("../data/WTF/Account/", "MINGER", "Madmortem", "Drathal");
-    });
-});
-*/
