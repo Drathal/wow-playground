@@ -1,5 +1,6 @@
-import * as fs from "fs";
+import * as fs from "async-file";
 import * as path from "path";
+import { pipe, split, replace, map } from "ramda";
 
 export interface IAddon {
     addon: string;
@@ -14,13 +15,13 @@ export const getPath = (base: string, account: string, server: string, char: str
     return path.join(__dirname, base, `${account}/${server}/${char}/${ADDONS_FILENAME}`);
 };
 
-export const getList = (path: string): IAddonList => {
-    return fs.readFileSync(path, "UTF-8", )
-        .split("\n")
-        .map((line: string) => line.replace("\r", ""))
-        .map((line: string) => line.split(": "))
-        .map((line: Object) => ({
+export const getList = async (path: string): Promise<IAddonList> =>
+    pipe(
+        split("\n"),
+        map(replace("\r", "")),
+        map(split(": ")),
+        map((line) => ({
             addon: line[0],
             enabled: line[1] === "enabled"
-        }));
-};
+        }))
+    )(await fs.readFile(path, "utf8"));

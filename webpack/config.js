@@ -1,6 +1,8 @@
 const webpack = require('webpack');
 const path = require('path');
 const { CheckerPlugin, TsConfigPathsPlugin } = require('awesome-typescript-loader');
+const SRC_PATH = path.resolve(__dirname, '../src');
+const DIST_PATH = path.resolve(__dirname, '../dist');
 
 const config = {
   target: 'node',
@@ -13,11 +15,12 @@ const config = {
     'app': ['./src/index.ts']
   },
   output: {
-    path: path.resolve(__dirname, '../dist'),
+    path: DIST_PATH,
     filename: '[name].bundle.js'
   },
   resolve: {
-    extensions: ['.ts']
+    extensions: ['.ts','.js'],
+    modules: [SRC_PATH, 'node_modules'],
   },
   module: {
     rules: [

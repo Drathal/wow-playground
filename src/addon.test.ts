@@ -8,13 +8,13 @@ test("getPath()", (t: TestContext) => {
     t.true(addonPath.includes("data/WTF/Account/MINGER/Madmortem/Drathal/AddOns.txt"));
 });
 
-test("getList()", (t: TestContext) => {
+test("getList()", async (t: TestContext) => {
     const expected = [
         { addon: "ElvUI_BenikUI", enabled: true },
         { addon: "AdvancedInterfaceOptions", enabled: true }
     ];
 
-    const result: IAddonList = getList(path.join(__dirname, "../test/fixtures/AddOns.txt"));
+    const result: IAddonList = await getList(path.join(__dirname, "../test/fixtures/AddOns.txt"));
 
     t.deepEqual(expected, result);
 });

@@ -18,7 +18,9 @@
   "author": "Markus Dethlefsen",
   "license": "ISC",
   "dependencies": {
-    "lua2json": "^1.1.2"
+    "async-file": "^2.0.2",
+    "lua2json": "^1.1.2",
+    "ramda": "^0.23.0"
   },
   "devDependencies": {
     "@types/node": "^7.0.5",
