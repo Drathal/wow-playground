@@ -11,7 +11,7 @@
     "test": "tsc && nyc --all --reporter=html --reporter=text ava",
     "watch:build": "tsc --watch",
     "watch:test": "ava --watch",
-    "watchme:webpack": "webpack --watch --config ./webpack/config.js",
+    "watch:webpack": "webpack --watch --config ./webpack/config.js",
     "webpack:build": "webpack --config ./webpack/config.js",
     "webpack:start": "node ./dist/app.bundle.js"
   },
@@ -50,6 +50,7 @@
   },
   "nyc": {
     "exclude": [
+      "coverage/*",
       "dist/**/*.test.js",
       "webpack/*",
       "dist/app*",
