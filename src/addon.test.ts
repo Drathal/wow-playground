@@ -1,15 +1,32 @@
 import { test, TestContext } from "ava";
-import { getPath, parseList, getAddonList, IAddonList } from "./addon";
+import {
+    getAddonListPath,
+    getAccountSavedVariablesPath,
+    getCharSavedVariablesPath,
+    parseList,
+    getAddonList,
+    IAddonList
+} from "./addon";
 
-test("getPath()", (t: TestContext) => {
-    const addonPath: string = getPath("../data/WTF/Account/", "MINGER", "Madmortem", "Drathal");
-    t.true(addonPath.includes("data/WTF/Account/MINGER/Madmortem/Drathal/AddOns.txt"));
+test("getAddonListPath()", (t: TestContext) => {
+    const addonPath: string = getAddonListPath("../data/WTF/Account/", "MINGER", "Madmortem", "Drathal").split("data")[1];
+    t.deepEqual(addonPath, "/WTF/Account/MINGER/Madmortem/Drathal/AddOns.txt");
+});
+
+test("getAccountSavedVariablesPath()", (t: TestContext) => {
+    const savedVariablesPath: string = getAccountSavedVariablesPath("../data/WTF/Account/", "MINGER", "Madmortem").split("data")[1];
+    t.deepEqual(savedVariablesPath, "/WTF/Account/MINGER/Madmortem/SavedVariables");
+});
+
+test("getCharSavedVariablesPath()", (t: TestContext) => {
+    const savedVariablesPath: string = getCharSavedVariablesPath("../data/WTF/Account/", "MINGER", "Madmortem", "Drathal").split("data")[1];
+    t.deepEqual(savedVariablesPath, "/WTF/Account/MINGER/Madmortem/Drathal/SavedVariables", );
 });
 
 test("parseList()", (t: TestContext) => {
     const fileContent
-        = "ElvUI_BenikUI: enabled \n"
-        + "AdvancedInterfaceOptions: enabled \n";
+        = "ElvUI_BenikUI     : enabled \n"
+        + "AdvancedInterfaceOptions:    enabled \n";
 
     const expected = [
         { addon: "ElvUI_BenikUI", enabled: true },
@@ -17,13 +34,11 @@ test("parseList()", (t: TestContext) => {
     ];
 
     const result: IAddonList = parseList(fileContent);
-
     t.deepEqual(expected, result);
 });
 
 test("getAddonList()", async (t: TestContext) => {
     const expected = { addon: "ElvUI_BenikUI", enabled: true };
     const result: IAddonList = await getAddonList("MINGER", "Madmortem", "Drathal", "../test/fixtures/");
-
     t.deepEqual(expected, result[0]);
 });

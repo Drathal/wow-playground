@@ -9,14 +9,19 @@ export interface IAddon {
 
 export type IAddonList = IAddon[];
 
-export const ADDONS_FILENAME = "AddOns.txt";
-export const ACCOUNT_PATH = "../data/WTF/Account/";
+export const getDynamicPath = (account: string, server: string, char: string | boolean = false) =>
+    char
+        ? `${account}/${server}/${char}/`
+        : `${account}/${server}/`;
 
-export const getFile = async (path) =>
-    await fs.readFile(path, "utf8");
+export const getAddonListPath = (base: string, account: string, server: string, char: string): string =>
+    path.join(__dirname, base, getDynamicPath(account, server, char), "AddOns.txt");
 
-export const getPath = (base: string, account: string, server: string, char: string, filename: string = ADDONS_FILENAME): string =>
-    path.join(__dirname, base, `${account}/${server}/${char}/${filename}`);
+export const getAccountSavedVariablesPath = (base: string, account: string, server: string): string =>
+    path.join(__dirname, base, getDynamicPath(account, server), "SavedVariables");
+
+export const getCharSavedVariablesPath = (base: string, account: string, server: string, char: string): string =>
+    path.join(__dirname, base, getDynamicPath(account, server, char), "SavedVariables");
 
 export const parseList = (content: string): IAddonList =>
     pipe(
@@ -29,9 +34,8 @@ export const parseList = (content: string): IAddonList =>
         }))
     )(content);
 
-export const getAddonList = async (account: string, server: string, username: string, accountPath: string = ACCOUNT_PATH): Promise<IAddonList> => {
-    const path = getPath(accountPath, account, server, username);
-    const file = await getFile(path);
-    const parsed = parseList(file);
-    return parsed;
+export const getAddonList = async (account: string, server: string, username: string, accountPath: string): Promise<IAddonList> => {
+    const path = getAddonListPath(accountPath, account, server, username);
+    const file = await fs.readFile(path, "utf8");
+    return parseList(file);
 };

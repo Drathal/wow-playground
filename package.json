@@ -54,6 +54,7 @@
     ],
     "exclude": [
       "coverage/*",
+      "dist/**/index.js",
       "dist/**/*.test.js",
       "webpack/*",
       "dist/app*",
