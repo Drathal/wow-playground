@@ -14,7 +14,7 @@ export const parseList = R.pipe(
     R.map(v => R.trim(v[0]))
 );
 
-export const absPath = folders => path.join(__dirname, ...folders);
+export const absPath = (folders: string[]) => path.join(__dirname, ...folders);
 
 export const getAddonList = pipe(
     absPath,
@@ -23,7 +23,7 @@ export const getAddonList = pipe(
     parseList
 );
 
-export const getSavedVariablesFileList = folders => pipe(
+export const getSavedVariablesFileList = (folders: string[]) => pipe(
     absPath,
     fs.readdir,
     R.map(f => path.join(absPath(folders), f))

@@ -1,14 +1,12 @@
 import { test, TestContext } from "ava";
-// import * as fs from "async-file";
 import * as path from "path";
 import {
     absPath,
     parseList,
     getAddonList,
     getSavedVariablesFileList,
-    //    deleteUnusedFiles,
     IAddonList,
-    // IFileList
+    IFileList
 } from "./addon";
 
 test("parseList()", (t: TestContext) => {
@@ -30,7 +28,7 @@ test("absPath()", (t: TestContext) => {
 
 test("getAddonList()", async (t: TestContext) => {
     const expected = ["AdvancedInterfaceOptions", "_Cursor", "!BugGrabber"];
-    const result = await getAddonList(["../test/fixtures/", "MINGER", "Madmortem", "Drathal", "AddOns.txt"]);
+    const result: IFileList = await getAddonList(["../test/fixtures/", "MINGER", "Madmortem", "Drathal", "AddOns.txt"]);
     t.deepEqual(expected, result);
 });
 
@@ -41,7 +39,7 @@ test("getSavedVariablesFileList()", async (t: TestContext) => {
         path.join(__dirname, "../test/fixtures/MINGER/SavedVariables", "_Cursor.lua"),
         path.join(__dirname, "../test/fixtures/MINGER/SavedVariables", "_Cursor.lua.bak")
     ];
-    const result = await getSavedVariablesFileList(["../test/fixtures/", "MINGER", "SavedVariables"]);
+    const result: IFileList = await getSavedVariablesFileList(["../test/fixtures/", "MINGER", "SavedVariables"]);
 
     t.deepEqual(expected[0], result[0]);
     t.deepEqual(expected[1], result[1]);
