@@ -1,2 +1,5 @@
-ElvUI_BenikUI: enabled
+ElvUI_BenikUI: disabled
 AdvancedInterfaceOptions: enabled
+_Cursor: enabled
+!BugGrabber: enabled
+delete: disabled

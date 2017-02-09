@@ -20,6 +20,7 @@
   "dependencies": {
     "async-file": "^2.0.2",
     "lua2json": "^1.1.2",
+    "promised-pipe": "^1.1.1",
     "ramda": "^0.23.0"
   },
   "devDependencies": {
