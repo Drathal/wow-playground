@@ -1,0 +1,13 @@
+
+GHActivated = true
+GHSellGreyActivated = true
+GHAutoGreed = true
+GHAutoAcceptQuestReward = false
+GHAutoNeed = false
+GHAutoEquipLootStuff = true
+GHAutoEquipWhenChangeSpe = true
+GHAMR = 0
+GHMinimapButton = true
+GHAutoRepair = 0
+GHAutoInvite = true
+GHAutoTell = true

@@ -1,0 +1,95 @@
+
+TradeSkillMaster_CraftingDB = {
+	["f@Horde - Blackhand@ignoreAlts"] = false,
+	["f@Horde - Blackhand@disableCheckBox"] = false,
+	["f@Horde - Blackhand@playerProfessions"] = {
+		["Darlaxle"] = {
+			["Jewelcrafting"] = {
+				["isSecondary"] = false,
+				["level"] = 600,
+				["maxLevel"] = 600,
+			},
+			["Mining"] = {
+				["isSecondary"] = false,
+				["level"] = 600,
+				["maxLevel"] = 700,
+			},
+			["First Aid"] = {
+				["isSecondary"] = true,
+				["level"] = 375,
+				["maxLevel"] = 700,
+			},
+			["Cooking"] = {
+				["isSecondary"] = true,
+				["level"] = 165,
+				["maxLevel"] = 700,
+			},
+		},
+	},
+	["f@Horde - Blackhand@mats"] = {
+	},
+	["g@ @ignoreCharacters"] = {
+	},
+	["_hash"] = 16460334,
+	["g@ @frameQueueOpen"] = false,
+	["g@ @priceColumn"] = 1,
+	["g@ @questSmartCrafting"] = true,
+	["_currentProfile"] = {
+		["Darlaxle - Blackhand"] = "Default",
+	},
+	["g@ @defaultCraftPriceMethod"] = "first(dbminbuyout, dbmarket)",
+	["g@ @ignoreCDCraftCost"] = true,
+	["g@ @ignoreGuilds"] = {
+	},
+	["g@ @showingDefaultFrame"] = false,
+	["f@Horde - Blackhand@queueStatus"] = {
+		["collapsed"] = {
+		},
+	},
+	["f@Horde - Blackhand@professionScanCache"] = {
+	},
+	["f@Horde - Blackhand@ignoreDECheckBox"] = false,
+	["f@Horde - Blackhand@crafts"] = {
+	},
+	["g@ @defaultMatCostMethod"] = "min(dbmarket, crafting, vendorbuy, convert(dbmarket))",
+	["g@ @queueSort"] = 1,
+	["g@ @helpPlatesShown"] = {
+		["gatheringFrame"] = true,
+	},
+	["f@Horde - Blackhand@gathering"] = {
+		["availableMats"] = {
+		},
+		["shortItems"] = {
+		},
+		["extraMats"] = {
+		},
+		["destroyingMats"] = {
+		},
+		["selectedSources"] = {
+		},
+		["professions"] = {
+		},
+		["neededMats"] = {
+		},
+		["gatheredMats"] = false,
+		["selectedSourceStatus"] = {
+		},
+	},
+	["_scopeKeys"] = {
+		["char"] = {
+			"Darlaxle - Blackhand", -- [1]
+		},
+		["realm"] = {
+			"Blackhand", -- [1]
+		},
+		["profile"] = {
+			"Default", -- [1]
+		},
+		["factionrealm"] = {
+			"Horde - Blackhand", -- [1]
+		},
+	},
+	["f@Horde - Blackhand@ignoreIntermediate"] = false,
+	["_version"] = 1,
+	["g@ @profitPercent"] = 0,
+}

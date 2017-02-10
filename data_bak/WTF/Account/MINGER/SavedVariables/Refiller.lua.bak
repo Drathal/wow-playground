@@ -1,0 +1,10 @@
+
+RefillerDB = {
+	["profileKeys"] = {
+		["Drathair - Blackhand"] = "Drathair - Blackhand",
+	},
+	["profiles"] = {
+		["Drathair - Blackhand"] = {
+		},
+	},
+}

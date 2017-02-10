@@ -1,6 +1,7 @@
 import {
     getAddonList,
-    getSavedVariablesFileList
+    getSavedVariablesFileList,
+    deleteUnusedFiles
 } from "./addon";
 
 const ACCOUNT_PATH = "../data/WTF/Account/";
@@ -9,9 +10,10 @@ const SAVEDVARIABLES_DIRNAME = "SavedVariables";
 
 const main = async () => {
     const addonList = await getAddonList([ACCOUNT_PATH, "MINGER", "Madmortem", "Drathal", ADDONLIST_FILENAME]);
-    const SVList = await getSavedVariablesFileList([ACCOUNT_PATH, "MINGER", SAVEDVARIABLES_DIRNAME]);
+    const fileList = await getSavedVariablesFileList([ACCOUNT_PATH, "MINGER", SAVEDVARIABLES_DIRNAME]);
+    const deletedFiles = await deleteUnusedFiles(addonList, fileList);
 
-    console.log(addonList, SVList);
+    console.log("deleted: ", deletedFiles);
 };
 
 main();

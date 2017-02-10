@@ -1,0 +1,10 @@
+
+PandariaTreasuresDB = {
+	["profileKeys"] = {
+		["Dronthal - Blackhand"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

@@ -1,0 +1,17 @@
+
+Postal3DB = {
+	["global"] = {
+		["BlackBook"] = {
+			["alts"] = {
+				"Drathal|Madmortem|Alliance|110|DRUID", -- [1]
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Drathal - Madmortem"] = "Drathal - Madmortem",
+	},
+	["profiles"] = {
+		["Drathal - Madmortem"] = {
+		},
+	},
+}

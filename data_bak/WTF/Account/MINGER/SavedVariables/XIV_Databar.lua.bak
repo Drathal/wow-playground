@@ -1,0 +1,17 @@
+
+TEST_CONFIG = {
+	["money_related_stuff"] = {
+		["Blackhand"] = {
+			["Horde"] = {
+				["Drathair"] = {
+					["money_on_first_login_today"] = 513516341,
+					["money_on_log_out"] = 513516341,
+					["money_on_first_weekday"] = 513516341,
+					["money_on_session_start"] = 513516341,
+					["lastLoginDate"] = 20160805,
+					["CLASS"] = "MONK",
+				},
+			},
+		},
+	},
+}

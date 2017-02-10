@@ -1,0 +1,39 @@
+
+NugComboBarDB_Global = {
+	["classThemes"] = true,
+	["x"] = -73.9999008178711,
+	["hideWithoutTarget"] = true,
+	["y"] = -115.000175476074,
+	["preset3d"] = "funnelRed",
+	["colors"] = {
+		{
+		}, -- [1]
+		{
+		}, -- [2]
+		{
+		}, -- [3]
+		{
+		}, -- [4]
+		{
+		}, -- [5]
+		{
+		}, -- [6]
+		{
+		}, -- [7]
+		{
+		}, -- [8]
+		{
+		}, -- [9]
+		{
+		}, -- [10]
+		["bar1"] = {
+		},
+		["bar2"] = {
+		},
+		["layer2"] = {
+		},
+	},
+	["soundNameFull"] = "coldblood",
+	["charspec"] = {
+	},
+}

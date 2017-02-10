@@ -1,0 +1,29 @@
+
+IAM_PriosTable = {
+	["enUS"] = {
+	},
+}
+IAM_Database = {
+	["enUS"] = {
+	},
+}
+IAM_Options = {
+	["database"] = {
+		10, -- [1]
+		113, -- [2]
+		false, -- [3]
+	},
+	["version"] = 2,
+	["marks_prio"] = {
+		8, -- [1]
+		7, -- [2]
+	},
+	["load"] = {
+		true, -- [1]
+		true, -- [2]
+		[8] = true,
+		[23] = true,
+	},
+	["blacklist"] = {
+	},
+}

@@ -1,0 +1,31 @@
+
+CliqueDB = nil
+CliqueDB3 = {
+	["char"] = {
+		["Drathair - Blackhand"] = {
+			["alerthidden"] = true,
+			["blacklist"] = {
+				["PlayerFrame"] = true,
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Drathair - Blackhand"] = "Drathair - Blackhand",
+	},
+	["profiles"] = {
+		["Drathair - Blackhand"] = {
+			["bindings"] = {
+				{
+					["macrotext"] = "/cast [@mouseover] Thunder Focus Tea\n/cast [@mouseover] Enveloping Mist",
+					["type"] = "macro",
+					["key"] = "BUTTON1",
+					["sets"] = {
+						["hovercast"] = true,
+						["friend"] = true,
+						["spec2"] = true,
+					},
+				}, -- [1]
+			},
+		},
+	},
+}

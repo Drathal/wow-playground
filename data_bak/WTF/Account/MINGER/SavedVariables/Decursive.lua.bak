@@ -1,0 +1,30 @@
+
+DecursiveDB = {
+	["profileKeys"] = {
+		["Drathal - Madmortem"] = "Default",
+	},
+	["class"] = {
+		["DRUID"] = {
+			["CureOrder"] = {
+				-13, -- [1]
+				-15, -- [2]
+				nil, -- [3]
+				1, -- [4]
+				[8] = 2,
+				[16] = -14,
+				[32] = -16,
+			},
+		},
+	},
+	["global"] = {
+		["LastVersionAnnounce"] = 1480607298,
+	},
+	["profiles"] = {
+		["Default"] = {
+			["DebuffsFrameContainer_y"] = 192.71083365943,
+			["MainBarX"] = 682.666683197022,
+			["MainBarY"] = -95.9999914738864,
+			["DebuffsFrameContainer_x"] = 402.488594815459,
+		},
+	},
+}

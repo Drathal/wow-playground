@@ -1,0 +1,20 @@
+
+HandyNotesDB = {
+	["profileKeys"] = {
+		["Draltair - Blackhand"] = "Draltair - Blackhand",
+	},
+	["profiles"] = {
+		["Draltair - Blackhand"] = {
+			["enabled"] = false,
+		},
+	},
+}
+HandyNotes_HandyNotesDB = {
+	["profileKeys"] = {
+		["Draltair - Blackhand"] = "Draltair - Blackhand",
+	},
+	["profiles"] = {
+		["Draltair - Blackhand"] = {
+		},
+	},
+}

@@ -1,0 +1,6 @@
+
+LFRAdvancedOptions = {
+	["AutoRefreshInterval"] = 30,
+	["LastSearchText"] = "",
+	["ShowMemberInfo"] = true,
+}

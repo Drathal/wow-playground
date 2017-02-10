@@ -1,0 +1,66 @@
+VER 3 00000000000000AF "Bags" "Achievement_Boss_spoils_of_pandaria."
+/cbniv scale 0.87
+/cbniv addbag fishing
+/rl
+END
+VER 3 00000000000000A9 "camera" "SPELL_MAGIC_MANAGAIN"
+/console cameraDistanceMaxFactor 2.6
+END
+VER 3 00000000000000AD "Char" "INV_CHEST_LEATHER_09"
+/run if not InCombatLockdown() then ToggleCharacter("PaperDollFrame") end
+END
+VER 3 00000000000000A8 "combattext" "INV_SWORD_04"
+/console floatingCombatTextCombatDamage 0
+/console floatingCombatTextCombatHealing 0
+END
+VER 3 00000000000000A7 "Console" "134329"
+/console scriptErrors 1
+END
+VER 3 00000000000000B6 "Decursive" "INV_MISC_QUESTIONMARK"
+/script DecursiveRootTable.Dcr:Println('No spell available')
+END
+VER 3 000000000000009D "Detail" "237050"
+/details show
+END
+VER 3 00000000000000B5 "Details" "651742"
+/dt toggle
+END
+VER 3 0000000000000042 "Focus" "Spell_Shaman_ImprovedEarthShield"
+/focus
+/clearfocus [mod:shift]
+END
+VER 3 00000000000000A4 "font" "INV_MISC_NOTE_05"
+/rl
+END
+VER 3 00000000000000AC "group" "ACHIEVEMENT_GUILDPERK_QUICK AND DEAD"
+/dungeonfinder
+END
+VER 3 00000000000000AB "Macros" "254884"
+/mc
+END
+VER 3 00000000000000AA "Roll dice" "237285"
+/dices
+END
+VER 3 00000000000000AE "sms" "135769"
+/sms
+END
+VER 3 00000000000000B4 "Stachel" "979586"
+/ss4 toggle
+END
+VER 3 000000000000000F "t all" "INV_Pet_TigerGodCub.blp"
+#show
+/use 13
+/use 14
+END
+VER 3 00000000000000B0 "YesBoss:M1" "INV_Misc_Questionmark"
+/click YesBossMacroButton1
+END
+VER 3 00000000000000B1 "YesBoss:M2" "INV_Misc_Questionmark"
+/click YesBossMacroButton2
+END
+VER 3 00000000000000B2 "YesBoss:M3" "INV_Misc_Questionmark"
+/click YesBossMacroButton3
+END
+VER 3 00000000000000B3 "YesBoss:M4" "INV_Misc_Questionmark"
+/click YesBossMacroButton4
+END

@@ -1,0 +1,22 @@
+
+SkadaDB = {
+	["namespaces"] = {
+		["LibDualSpec-1.0"] = {
+		},
+	},
+	["hasUpgraded"] = true,
+	["profileKeys"] = {
+		["Draltair - Blackhand"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["windows"] = {
+				{
+					["y"] = 21.9998359680176,
+					["point"] = "BOTTOMRIGHT",
+					["x"] = -0.9998779296875,
+				}, -- [1]
+			},
+		},
+	},
+}

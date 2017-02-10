@@ -1,0 +1,12 @@
+
+KalielsTrackerDB = {
+	["profileKeys"] = {
+		["Draltar - Blackhand"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["collapsed"] = true,
+			["helpTutorial"] = 1,
+		},
+	},
+}

@@ -29,21 +29,15 @@ export const getSavedVariablesFileList = (folders: string[]) => pipe(
     R.map(f => path.join(absPath(folders), f))
 )(folders);
 
-/*
+const isEnabled = (addonPath: string, addonList): boolean =>
+    addonList
+        .filter(addon => addonPath.includes("/" + addon + "."))
+        .length > 0;
 
-export const deleteUnusedFiles = async (addonList: IAddonList, fileList: IFileList) => {
-    const isEnabled = (addon: string): boolean => {
-        const r = addonList
-            .filter(a => addon.includes("/" + a + "."))
-            .length > 0;
-        return r;
-    };
-
-    return fileList
-        .filter(f => !isEnabled(f))
-        .map((f) => {
-            // await fs.unlink(path.join(__dirname,)
-            return f;
-        });
-};
- */
+export const deleteUnusedFiles = (addonList: IAddonList, fileList: IFileList) => pipe(
+    R.filter(f => !isEnabled(f, addonList)),
+    R.map((f) => {
+        fs.unlink(f);
+        return f;
+    })
+)(fileList);
